@@ -298,7 +298,7 @@ export default function App() {
         <div className="max-w-[1280px] mx-auto px-5 rounded-md overflow-hidden">
           <Swiper
             modules={[Navigation]}
-            spaceBetween={50}
+            spaceBetween={24}
             slidesPerView={4}
             navigation
             onSlideChange={() => console.log("slide change")}
