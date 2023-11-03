@@ -36,7 +36,7 @@ export default function App() {
             >
               <path d="M1 8H15" stroke="#222222" stroke-width="1.5" />
               <path d="M1 12H15" stroke="#222222" stroke-width="1.5" />
-              <path d="M1 4H15" stroke="#222222" stroke-width="1.5" />
+              <path d="M1 4H15" st roke="#222222" stroke-width="1.5" />
             </svg>
             <img width={32} height={32} className="object-cover" src="./design-drops-symbol 1.png" alt="header logo" />
           </button>
