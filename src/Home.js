@@ -164,7 +164,7 @@ export default function Home({info1 , setInfo1 , info , setInfo}) {
                       <p className="text-[#717171] leading-5 text-sm mb-2">
                         {item.num}
                       </p>
-                      <p className="text-[#222] text-base leading-5 flex gap-1 items-center">
+                      <p className="text-[#222] text-base leading-5 flex gap-1 items-center mb-2">
                         <b className="font-bold">{item.price}</b>night
                       </p>
                     </Link>
