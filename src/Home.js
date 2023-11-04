@@ -1,24 +1,24 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import dataBanner from "./data";
+import { useFetch } from "./hooks/useFetch";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
-export default function Home({info1 , setInfo1 , info , setInfo}) {
-  
+export default function Home({info1 , setInfo1}) {
+  const { data, isPanding, error } = useFetch("http://localhost:3000/data");
+console.log(data);
   function filterData(id) {
     setInfo1(info1.filter(function(item){
         return item.id !== id
     }))
-    setInfo(info&& info.filter(function(item){
-      return item.id !== id
-  }))
+  
   }
   return (
     <div>
-      {/* {isPanding && <h3>Loading...</h3>} */}
+      {isPanding && <h3>Loading...</h3>}
       {/* {error && <h3>error XXXXXX</h3>} */}
       <section className="mb-16">
         <div className="p-4 flex items-center max-w-[610px] mx-auto border border-[#ddd] rounded-xl">
@@ -68,8 +68,8 @@ export default function Home({info1 , setInfo1 , info , setInfo}) {
           {/* {data.map((item)=>{
              console.log(item.title);
           })} */}
-          {info
-            ? info.map(function (item) {
+          {data
+            ? data.map(function (item) {
                 return (
                   <div>
                     <Link
@@ -84,7 +84,7 @@ export default function Home({info1 , setInfo1 , info , setInfo}) {
                       />
                       <div className="flex items-center justify-between mb-[2px]">
                         <h3 className="text-[#222] text-base font-bold capitalize leading-5">
-                          {item.title}
+                          {item.title} salom dunyo
                         </h3>
                         <span className="flex gap-1 items-center text-[#222] leading-5">
                           <svg
