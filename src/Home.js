@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useFetch } from "./hooks/useFetch";
 
 export default function Home() {
-  const {data , isPanding , error} = useFetch("http://localhost:3333/data")
+  const {data , isPanding , error} = useFetch("http://localhost:3000/data")
   return (
     <div>
       {isPanding && <h3>Loading...</h3>}
@@ -20,7 +20,7 @@ export default function Home() {
     er gap-5"
           >
             <b className="font-bold border-r-2 pr-5">Display total price</b>
-            Includes all fees, before taxes
+            Includes all fees , before taxes 
           </p>
           <div className="bg-[#B0B0B0] border-4 border-[#B0B0B0] rounded-3xl flex items-center ml-auto w-12">
             <button className="h-6 w-6 bg-white rounded-full"></button>

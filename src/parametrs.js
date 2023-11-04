@@ -8,8 +8,8 @@ import { useFetch } from "./hooks/useFetch";
 
 export default function Parametrs() {
   let {id} =  useParams()
-  let url  = `http://localhost:3333/data/${id}`
-  let url2  = `http://localhost:3333/data/`
+  let url  = `http://localhost:3000/data/${id}`
+  let url2  = `http://localhost:3000/data/`
   const {data , isPanding , error} = useFetch(url)
   const {data:data1 , isPanding:isPanding1 , error:error1} = useFetch(url2)
   return (
