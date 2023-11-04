@@ -9,7 +9,9 @@ import { useFetch } from "./hooks/useFetch";
 export default function Parametrs() {
   let {id} =  useParams()
   let url  = `http://localhost:3333/data/${id}`
+  let url2  = `http://localhost:3333/data/`
   const {data , isPanding , error} = useFetch(url)
+  const {data:data1 , isPanding:isPanding1 , error:error1} = useFetch(url2)
   return (
     <div>
       {isPanding && <h3>Loading...</h3>}
@@ -72,18 +74,18 @@ export default function Parametrs() {
               disableOnInteraction: true,
             }}
           >
-            {[1, 1, 1, 1, 1, 1, 1, 1, 1].map(() => {
+            {data1 && data1.map((item , index) => {
               return (
                 <SwiperSlide>
-                  <Link to="/parametrs" className="hover:shadow-sm pb-5">
+                  <Link to={`/${item.id}`} className="hover:shadow-sm pb-5">
                     <img
                       className="rounded-lg w-full h-[286px] object-cover mb-3"
-                      src="./category-2.png"
+                      src={item.img}
                       alt="category img"
                     />
                     <div className="flex items-center justify-between mb-[2px]">
                       <h3 className="text-[#222] text-base font-bold capitalize leading-5">
-                        Chicago, Illinois
+                        {item.title}
                       </h3>
                       <span className="flex gap-1 items-center text-[#222] leading-5">
                         <svg
@@ -100,17 +102,17 @@ export default function Parametrs() {
                             fill="#222222"
                           />
                         </svg>
-                        <span>5.0</span>
+                        <span>{item.id}</span>
                       </span>
                     </div>
                     <p className="text-[#717171] leading-5 text-base">
-                      Lake and city views
+                      {item.category}
                     </p>
                     <p className="text-[#717171] leading-5 text-sm mb-2">
-                      Mar 4 – 9
+                      {item.num}
                     </p>
                     <p className="text-[#222] text-base leading-5 flex gap-1 items-center">
-                      <b className="font-bold">$349</b>night
+                      <b className="font-bold">{item.price}</b>night
                     </p>
                   </Link>
                 </SwiperSlide>
