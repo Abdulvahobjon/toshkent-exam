@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { useFetch } from "./hooks/useFetch";
 
 export default function Home() {
-  const {data , isPanding , error} = useFetch("http://localhost:3000/data")
+  const {data , isPanding , error} = useFetch("http://localhost:3333/data")
   return (
     <div>
       {isPanding && <h3>Loading...</h3>}
