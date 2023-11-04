@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import data1 from "./data";
+import dataBanner from "./data";
+import data1 from "./data1";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -12,7 +13,7 @@ export default function Home() {
   return (
     <div>
       {isPanding && <h3>Loading...</h3>}
-      {error && <h3>error XXXXXX</h3>}
+      {/* {error && <h3>error XXXXXX</h3>} */}
       <section className="mb-16">
         <div className="p-4 flex items-center max-w-[610px] mx-auto border border-[#ddd] rounded-xl">
           <p
