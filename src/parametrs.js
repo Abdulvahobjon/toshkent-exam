@@ -22,12 +22,12 @@ export default function Parametrs() {
         <div className="max-w-[1260px] mx-auto px-5 grid grid-cols-2 gap-2 justify-between">
           <img
             className="w-full h-[696px] rounded-xl object-cover"
-            src={data ? data.img : data1}
+            src={data ? data.img : data1.img}
             alt=""
           />
           <div className="hover:shadow-sm pb-5 w-[302px] ml-auto">
             <h3 className="text-[#222] text-base font-bold capitalize leading-5 mb-9">
-            {data ? data.title : data1}
+            {data ? data.title : data1.title}
             </h3>
             <div className="flex items-center justify-between mb-[2px]">
               <div></div>
@@ -46,15 +46,15 @@ export default function Parametrs() {
                     fill="#222222"
                   />
                 </svg>
-                <span>{data ? data.id : data1}</span>
+                <span>{data ? data.id : data1.id}</span>
               </span>
             </div>
             <p className="text-[#717171] leading-5 text-base">
-            {data ? data.category : data1}
+            {data ? data.category : data1.category}
             </p>
-            <p className="text-[#717171] leading-5 text-sm mb-2">  {data ? data.num : data1}</p>
+            <p className="text-[#717171] leading-5 text-sm mb-2">  {data ? data.num : data1.num}</p>
             <p className="text-[#222] text-base leading-5 flex gap-1 items-center">
-              <b className="font-bold">{data ? data.price : data1}</b>night
+              <b className="font-bold">{data ? data.price : data1.price}</b>night
             </p>
           </div>
         </div>
