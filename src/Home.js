@@ -13,6 +13,7 @@ export default function Home() {
     <div>
       {isPanding && <h3>Loading...</h3>}
       {error && <h3>error XXXXXX</h3>}
+      <h1>hello world</h1>
       <section className="mb-16">
         <div className="p-4 flex items-center max-w-[610px] mx-auto border border-[#ddd] rounded-xl">
           <p
